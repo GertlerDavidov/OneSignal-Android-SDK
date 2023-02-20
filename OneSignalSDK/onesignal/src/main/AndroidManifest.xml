@@ -83,14 +83,14 @@
 
         <service android:name="com.onesignal.NotificationRestoreService" />
 
-        <receiver android:name="com.onesignal.BootUpReceiver">
+        <receiver android:exported="false" android:name="com.onesignal.BootUpReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_BOOT_COMPLETED" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.onesignal.UpgradeReceiver" >
+        <receiver android:exported="false" android:name="com.onesignal.UpgradeReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
             </intent-filter>
